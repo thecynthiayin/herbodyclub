@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply for 1:1 Coaching | Her Body Club</title>
+  <meta name="description" content="Apply for personalised 1:1 online fitness coaching with Her Body Club. Tell us about your goals and get started." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="apply.css" />
+</head>
+<body class="apply-page">
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner container">
+      <a href="index.html" class="logo">Her Body Club</a>
+      <a href="index.html" class="btn btn-nav">← Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="apply-hero">
+    <div class="container narrow center">
+      <span class="eyebrow">1:1 Online Coaching</span>
+      <h1 class="apply-title">Start your<br><em>coaching journey.</em></h1>
+      <p class="apply-subtitle">Fill in the form below and I'll be in touch to discuss whether coaching is a good fit for you, and explain the options, format, and fees.</p>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section class="apply-form-section">
+    <div class="container narrow">
+
+      <!-- Success message (hidden by default) -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✓</div>
+        <h2>Application received!</h2>
+        <p>Thank you for taking the first step. I'll review your application and be in touch within 48 hours to discuss next steps.</p>
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+      </div>
+
+      <!-- The form -->
+      <form class="apply-form" id="applyForm" novalidate>
+
+        <!-- Progress indicator -->
+        <div class="form-progress">
+          <div class="progress-step active" data-step="1">
+            <div class="step-dot"></div>
+            <span>About You</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="2">
+            <div class="step-dot"></div>
+            <span>Your Goals</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="3">
+            <div class="step-dot"></div>
+            <span>Your Lifestyle</span>
+          </div>
+        </div>
+
+        <!-- ===== STEP 1: About You ===== -->
+        <div class="form-step" id="step1">
+          <h2 class="step-title">Tell me about yourself</h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First name <span class="req">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="e.g. Sarah" required />
+              <span class="field-error" id="firstNameError">Please enter your first name.</span>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last name <span class="req">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="e.g. Johnson" required />
+              <span class="field-error" id="lastNameError">Please enter your last name.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="e.g. sarah@email.com" required />
+            <span class="field-error" id="emailError">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age <span class="req">*</span></label>
+            <select id="age" name="age" required>
+              <option value="" disabled selected>Select your age range</option>
+              <option value="18-24">18–24</option>
+              <option value="25-34">25–34</option>
+              <option value="35-44">35–44</option>
+              <option value="45-54">45–54</option>
+              <option value="55+">55+</option>
+            </select>
+            <span class="field-error" id="ageError">Please select your age range.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="instagram">Instagram handle <span class="optional">(optional)</span></label>
+            <input type="text" id="instagram" name="instagram" placeholder="e.g. @sarahjohnson" />
+            <p class="field-hint">Helps me get a sense of where you're at. No pressure.</p>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-primary" onclick="nextStep(1)">Continue →</button>
+          </div>
+        </div>
+
+        <!-- ===== STEP 2: Your Goals ===== -->
+        <div class="form-step hidden" id="step2">
+          <h2 class="step-title">What are you working towards?</h2>
+
+          <div class="form-group">
+            <label>Primary goal <span class="req">*</span></label>
+            <div class="radio-group" id="primaryGoalGroup">
+              <label class="radio-card">
+                <input type="radio" name="primaryGoal" value="Lose body fat and get leaner" />
+                <span class="radio-label">🔥 Lose body fat and get leaner</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="primaryGoal" value="Build muscle and get more toned" />
+                <span class="radio-label">💪 Build muscle and get more toned</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="primaryGoal" value="Lose fat and build muscle together" />
+                <span class="radio-label">⚡ Lose fat and build muscle together</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="primaryGoal" value="Get stronger and fitter overall" />
+                <span class="radio-label">🏋️ Get stronger and fitter overall</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="primaryGoal" value="Build a consistent routine and healthy habits" />
+                <span class="radio-label">📆 Build a consistent routine and healthy habits</span>
+              </label>
+            </div>
+            <span class="field-error" id="primaryGoalError">Please select your primary goal.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="trainingExperience">Training experience <span class="req">*</span></label>
+            <select id="trainingExperience" name="trainingExperience" required>
+              <option value="" disabled selected>Select your experience level</option>
+              <option value="Complete beginner — I'm new to structured training">Complete beginner — I'm new to structured training</option>
+              <option value="Some experience — I've trained on and off">Some experience — I've trained on and off</option>
+              <option value="1-2 years consistent training">1–2 years consistent training</option>
+              <option value="3+ years consistent training">3+ years consistent training</option>
+            </select>
+            <span class="field-error" id="trainingExperienceError">Please select your experience level.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="currentChallenge">What's your biggest challenge right now? <span class="req">*</span></label>
+            <textarea id="currentChallenge" name="currentChallenge" rows="4" placeholder="e.g. I've been exercising regularly but not seeing changes. I'm not sure what to eat or how to structure my training..." required></textarea>
+            <span class="field-error" id="currentChallengeError">Please describe your current challenge.</span>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-secondary" onclick="prevStep(2)">← Back</button>
+            <button type="button" class="btn btn-primary" onclick="nextStep(2)">Continue →</button>
+          </div>
+        </div>
+
+        <!-- ===== STEP 3: Your Lifestyle ===== -->
+        <div class="form-step hidden" id="step3">
+          <h2 class="step-title">Your training &amp; lifestyle</h2>
+
+          <div class="form-group">
+            <label>Where do you train? <span class="req">*</span></label>
+            <div class="radio-group" id="trainingLocationGroup">
+              <label class="radio-card">
+                <input type="radio" name="trainingLocation" value="Gym" />
+                <span class="radio-label">🏢 Gym</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="trainingLocation" value="Home" />
+                <span class="radio-label">🏠 Home</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="trainingLocation" value="Both gym and home" />
+                <span class="radio-label">🔀 Both gym and home</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="trainingLocation" value="Not training yet" />
+                <span class="radio-label">🌱 Not training yet</span>
+              </label>
+            </div>
+            <span class="field-error" id="trainingLocationError">Please select where you train.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="daysPerWeek">How many days per week can you train? <span class="req">*</span></label>
+            <select id="daysPerWeek" name="daysPerWeek" required>
+              <option value="" disabled selected>Select days per week</option>
+              <option value="2 days">2 days</option>
+              <option value="3 days">3 days</option>
+              <option value="4 days">4 days</option>
+              <option value="5 days">5 days</option>
+              <option value="6+ days">6+ days</option>
+            </select>
+            <span class="field-error" id="daysPerWeekError">Please select your available training days.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="injuries">Do you have any injuries or health conditions I should know about? <span class="req">*</span></label>
+            <textarea id="injuries" name="injuries" rows="3" placeholder="e.g. Lower back pain, bad knees, recently postpartum — or type 'None' if not applicable." required></textarea>
+            <span class="field-error" id="injuriesError">Please answer this question (type 'None' if not applicable).</span>
+          </div>
+
+          <div class="form-group">
+            <label for="heardAbout">How did you hear about Her Body Club? <span class="optional">(optional)</span></label>
+            <select id="heardAbout" name="heardAbout">
+              <option value="" disabled selected>Select an option</option>
+              <option value="Instagram">Instagram</option>
+              <option value="TikTok">TikTok</option>
+              <option value="Google search">Google search</option>
+              <option value="Friend or family referral">Friend or family referral</option>
+              <option value="Facebook">Facebook</option>
+              <option value="YouTube">YouTube</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="anythingElse">Anything else you'd like to share? <span class="optional">(optional)</span></label>
+            <textarea id="anythingElse" name="anythingElse" rows="3" placeholder="Any other context, questions, or things I should know before we chat..."></textarea>
+          </div>
+
+          <!-- Privacy note -->
+          <p class="privacy-note">🔒 Your information is kept private and will only be used to assess your application and get in touch with you.</p>
+
+          <div class="form-group consent-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span>I agree to be contacted about coaching options based on my application. <span class="req">*</span></span>
+            </label>
+            <span class="field-error" id="consentError">Please confirm your consent to continue.</span>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-secondary" onclick="prevStep(3)">← Back</button>
+            <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+              <span class="btn-text">Submit Application</span>
+              <span class="btn-loading hidden">Sending…</span>
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">Her Body Club</p>
+      <p class="footer-copy">&copy; 2024 Her Body Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="apply.js"></script>
+</body>
+</html>
+

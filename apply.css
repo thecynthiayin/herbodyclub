@@ -1,0 +1,403 @@
+/* ============================================================
+   HER BODY CLUB — Apply Page Styles
+   ============================================================ */
+
+body.apply-page {
+  background: var(--cream);
+}
+
+/* ---- Apply Hero ------------------------------------------ */
+.apply-hero {
+  padding: 160px 0 70px;
+  background: linear-gradient(160deg, var(--cream-dark) 0%, var(--cream) 60%, var(--sage-light) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.apply-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 70% at 80% 50%, rgba(201, 185, 159, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.apply-title {
+  font-size: clamp(44px, 6vw, 68px);
+  font-weight: 300;
+  color: var(--soft-black);
+  margin-bottom: 24px;
+}
+
+.apply-title em { color: var(--cocoa); }
+
+.apply-subtitle {
+  font-size: 17px;
+  color: var(--warm-gray);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ---- Form Section ---------------------------------------- */
+.apply-form-section {
+  padding: 70px 0 100px;
+}
+
+/* ---- Success Message ------------------------------------- */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 60px 40px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--taupe-light);
+}
+
+.form-success.show { display: block; }
+
+.success-icon {
+  width: 72px; height: 72px;
+  background: var(--sage-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--sage);
+  margin: 0 auto 28px;
+  font-weight: 700;
+}
+
+.form-success h2 {
+  font-size: 36px;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.form-success p {
+  font-size: 16px;
+  color: var(--warm-gray);
+  margin-bottom: 36px;
+  line-height: 1.8;
+}
+
+/* ---- Progress Steps -------------------------------------- */
+.form-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 52px;
+  padding: 0 20px;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.step-dot {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--taupe-light);
+  border: 2px solid var(--taupe-light);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.step-dot::after {
+  content: '';
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.progress-step.active .step-dot {
+  background: var(--cocoa);
+  border-color: var(--cocoa);
+}
+
+.progress-step.active .step-dot::after {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.progress-step.done .step-dot {
+  background: var(--sage);
+  border-color: var(--sage);
+}
+
+.progress-step.done .step-dot::after {
+  content: '✓';
+  background: transparent;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto; height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.progress-step span {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.progress-step.active span { color: var(--cocoa); }
+.progress-step.done span   { color: var(--sage); }
+
+.progress-line {
+  flex: 1;
+  height: 1.5px;
+  background: var(--taupe-light);
+  margin: 0 12px;
+  margin-bottom: 24px;
+  max-width: 100px;
+  transition: background 0.4s ease;
+}
+
+/* ---- Form Card ------------------------------------------- */
+.apply-form {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--taupe-light);
+  padding: 52px 56px;
+  box-shadow: 0 4px 32px rgba(42, 35, 25, 0.06);
+}
+
+@media (max-width: 680px) {
+  .apply-form { padding: 36px 24px; }
+}
+
+/* ---- Form Steps ------------------------------------------ */
+.form-step { display: block; }
+.form-step.hidden { display: none; }
+
+.step-title {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 36px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--taupe-light);
+}
+
+/* ---- Form Fields ----------------------------------------- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+}
+
+.req { color: var(--cocoa); }
+.optional { color: var(--text-muted); font-weight: 400; text-transform: none; letter-spacing: 0; }
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--charcoal);
+  background: var(--cream);
+  border: 1.5px solid var(--taupe-light);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  -webkit-appearance: none;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9B99F' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--cocoa);
+  box-shadow: 0 0 0 3px rgba(122, 92, 69, 0.1);
+  background: var(--white);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #c0392b;
+}
+
+.form-group textarea { resize: vertical; min-height: 110px; line-height: 1.65; }
+
+.field-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: -4px;
+}
+
+.field-error {
+  font-size: 12px;
+  color: #c0392b;
+  display: none;
+  margin-top: -4px;
+}
+
+.field-error.show { display: block; }
+
+/* ---- Radio Cards ----------------------------------------- */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-card {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  cursor: pointer;
+}
+
+.radio-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--cream);
+  border: 1.5px solid var(--taupe-light);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  color: var(--charcoal);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  gap: 12px;
+}
+
+.radio-label:hover {
+  border-color: var(--taupe);
+  background: var(--cream-dark);
+}
+
+.radio-card input[type="radio"]:checked + .radio-label {
+  border-color: var(--cocoa);
+  background: rgba(122, 92, 69, 0.07);
+  color: var(--cocoa-dark);
+  font-weight: 500;
+}
+
+/* ---- Checkbox -------------------------------------------- */
+.consent-group { margin-top: 8px; }
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 1.6;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px; height: 20px;
+  min-width: 20px;
+  margin-top: 2px;
+  accent-color: var(--cocoa);
+  cursor: pointer;
+}
+
+/* ---- Privacy Note ---------------------------------------- */
+.privacy-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--sage-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* ---- Step Navigation ------------------------------------- */
+.step-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 12px;
+  padding-top: 28px;
+  border-top: 1px solid var(--taupe-light);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1.5px solid var(--taupe-light);
+  color: var(--warm-gray);
+  padding: 14px 28px;
+  border-radius: 2px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--taupe);
+  color: var(--charcoal);
+}
+
+.btn-submit {
+  min-width: 200px;
+  position: relative;
+}
+
+.btn-loading { display: none; }
+.btn-loading.show { display: inline; }
+.btn-text.hide  { display: none; }
+
