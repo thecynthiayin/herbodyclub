@@ -173,20 +173,21 @@ body.apply-page {
 /* ---- Phone / WhatsApp row -------------------------------- */
 .phone-row {
   display: flex;
+  flex-direction: column;
   gap: 10px;
-  align-items: flex-start;
 }
 
 .country-code-select {
-  width: 200px;
-  min-width: 170px;
-  flex-shrink: 0;
-  padding: 14px 36px 14px 14px !important;
-  font-size: 14px !important;
+  width: 100% !important;
+  min-width: unset !important;
+  max-width: unset !important;
+  flex-shrink: unset !important;
+  padding: 14px 40px 14px 16px !important;
+  font-size: 15px !important;
 }
 
 .phone-input-wrap {
-  flex: 1;
+  width: 100%;
 }
 
 .phone-input-wrap input {
@@ -210,11 +211,6 @@ body.apply-page {
 
 .phone-input-wrap input.error {
   border-color: #c0392b;
-}
-
-@media (max-width: 480px) {
-  .phone-row { flex-direction: column; }
-  .country-code-select { width: 100%; }
 }
 
 /* ---- Form Card ------------------------------------------- */
