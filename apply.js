@@ -63,6 +63,8 @@ function validateStep(step) {
     valid = validateField('firstName', 'firstNameError') && valid;
     valid = validateField('lastName', 'lastNameError') && valid;
     valid = validateEmail('email', 'emailError') && valid;
+    valid = validateSelect('countryCode', 'countryCodeError') && valid;
+    valid = validateField('whatsapp', 'whatsappError') && valid;
     valid = validateSelect('age', 'ageError') && valid;
   }
 
@@ -185,6 +187,8 @@ document.getElementById('applyForm').addEventListener('submit', async (e) => {
     firstName:          document.getElementById('firstName').value.trim(),
     lastName:           document.getElementById('lastName').value.trim(),
     email:              document.getElementById('email').value.trim(),
+    countryCode:        document.getElementById('countryCode').value,
+    whatsapp:           document.getElementById('countryCode').value + document.getElementById('whatsapp').value.trim(),
     age:                document.getElementById('age').value,
     instagram:          document.getElementById('instagram').value.trim() || 'Not provided',
     primaryGoal:        document.querySelector('input[name="primaryGoal"]:checked')?.value || '',
