@@ -7,7 +7,7 @@
 // CONFIGURATION — Paste your Google Apps Script Web App URL here
 // after deploying the Code.gs script to Google Apps Script.
 // ─────────────────────────────────────────────────────────────
-const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxyc6ruKmxouPlj4lcflHEuoGcjB-0p2fpPRebESIZ72KwnDmYCZAEOVIjiYqTG8hKxNg/exec';
 
 
 // ─────────────────────────────────────────────────────────────
@@ -236,10 +236,7 @@ document.getElementById('applyForm').addEventListener('submit', async (e) => {
 });
 
 function showSuccess() {
-  document.getElementById('applyForm').style.display = 'none';
-  const success = document.getElementById('formSuccess');
-  success.classList.add('show');
-  success.style.display = 'block';
-  success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Redirect to the thank-you page
+  window.location.href = 'thank-you.html';
 }
 

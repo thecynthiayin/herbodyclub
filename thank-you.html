@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Received | Her Body Club</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(160deg, var(--cream-dark) 0%, var(--cream) 60%, var(--sage-light) 100%);
+    }
+
+    .thankyou-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 24px 60px;
+    }
+
+    .thankyou-card {
+      background: var(--white);
+      border: 1px solid var(--taupe-light);
+      border-radius: 20px;
+      padding: 64px 56px;
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 48px rgba(42, 35, 25, 0.08);
+      animation: fadeUp 0.7s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .ty-icon {
+      width: 80px; height: 80px;
+      background: var(--sage-light);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px;
+      margin: 0 auto 32px;
+      border: 2px solid rgba(155, 169, 139, 0.3);
+    }
+
+    .ty-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .ty-title {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 5vw, 44px);
+      font-weight: 300;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .ty-title em { color: var(--cocoa); }
+
+    .ty-body {
+      font-size: 16px;
+      color: var(--warm-gray);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .ty-note {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-style: italic;
+      color: var(--taupe);
+      margin: 28px 0 40px;
+      padding: 20px 24px;
+      border-left: 3px solid var(--taupe-light);
+      text-align: left;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    .ty-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .ty-link {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--taupe);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
+    }
+
+    .ty-link:hover { color: var(--charcoal); }
+
+    .ty-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--taupe-light);
+      margin: 32px auto;
+    }
+
+    .ty-what-next {
+      text-align: left;
+    }
+
+    .ty-what-next h3 {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 16px;
+    }
+
+    .ty-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ty-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 14px;
+      color: var(--warm-gray);
+      line-height: 1.6;
+    }
+
+    .ty-step-num {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--taupe);
+      min-width: 20px;
+      margin-top: -1px;
+    }
+
+    @media (max-width: 600px) {
+      .thankyou-card { padding: 44px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal navbar -->
+  <nav class="navbar scrolled">
+    <div class="nav-inner container">
+      <a href="index.html" class="logo">Her Body Club</a>
+    </div>
+  </nav>
+
+  <div class="thankyou-wrap">
+    <div class="thankyou-card">
+
+      <div class="ty-icon">🌿</div>
+      <span class="ty-eyebrow">Application Received</span>
+      <h1 class="ty-title">You've taken<br>the first step. <em>Well done.</em></h1>
+
+      <p class="ty-body">Thank you for applying for 1:1 coaching with Her Body Club. Your application has been received and I'll be in touch within <strong>48 hours</strong>.</p>
+
+      <div class="ty-note">
+        "You bring the effort. I bring the structure, guidance, and accountability."
+      </div>
+
+      <div class="ty-divider"></div>
+
+      <div class="ty-what-next">
+        <h3>What happens next</h3>
+        <div class="ty-steps">
+          <div class="ty-step">
+            <span class="ty-step-num">01</span>
+            <span>I'll review your application and reach out to your email to introduce myself.</span>
+          </div>
+          <div class="ty-step">
+            <span class="ty-step-num">02</span>
+            <span>We'll have a brief chat to discuss your goals, the coaching format, and whether it's a good fit.</span>
+          </div>
+          <div class="ty-step">
+            <span class="ty-step-num">03</span>
+            <span>If we're aligned, we'll get you set up and start building your personalised plan.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ty-divider"></div>
+
+      <div class="ty-actions">
+        <a href="index.html" class="btn btn-primary">Back to Her Body Club</a>
+        <a href="index.html#faq" class="ty-link">Read the FAQ while you wait →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">Her Body Club</p>
+      <p class="footer-copy">&copy; 2024 Her Body Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
