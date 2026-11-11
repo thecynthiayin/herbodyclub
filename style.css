@@ -207,7 +207,19 @@ em { font-style: italic; }
   transition: var(--transition);
 }
 
-.nav-links a:not(.btn):hover { color: var(--charcoal); }
+.nav-links a:not(.btn):hover  { color: var(--charcoal); }
+.nav-links a:not(.btn).active {
+  color: var(--cocoa);
+  position: relative;
+}
+.nav-links a:not(.btn).active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 1.5px;
+  background: var(--cocoa);
+  border-radius: 2px;
+}
 
 /* ---- Hamburger ------------------------------------------- */
 .nav-hamburger {

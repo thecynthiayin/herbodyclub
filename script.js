@@ -58,6 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  /* ---- Active nav link on scroll ----------------------- */
+  const sections   = document.querySelectorAll('section[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a:not(.btn)');
+
+  const activateNav = () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+    });
+    navAnchors.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+    });
+  };
+
+  window.addEventListener('scroll', activateNav, { passive: true });
+  activateNav();
+
+
   /* ---- Scroll-reveal animation -------------------------- */
   const revealTargets = document.querySelectorAll(
     '.section-title, .eyebrow, .hero-eyebrow, .hero-headline, ' +
