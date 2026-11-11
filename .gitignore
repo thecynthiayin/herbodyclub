@@ -1,0 +1,34 @@
+# Her Body Club — Git Ignore
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Node (if added later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build output (if added later)
+/dist
+/build
+
+# Environment variables
+.env
+.env.local
+.env*.local
+
+# Temp / scratch
+*.tmp
+*.temp
+*.log
+
+# Chrome debug profile
+ChromeDebug/
+
