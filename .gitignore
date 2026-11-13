@@ -32,3 +32,7 @@ yarn-error.log*
 # Chrome debug profile
 ChromeDebug/
 
+
+# Raw photo source folders (not used by the website)
+images/Body Transformation-*/
+images/Transformation Photos-*/
