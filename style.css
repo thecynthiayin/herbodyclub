@@ -937,6 +937,30 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   text-align: center;
 }
 
+/* ---- Results Bands (photo groups between sections) ------ */
+.results-band { padding: 80px 0; }
+
+.band-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.band-head .section-title { margin-bottom: 0; }
+.band-head .section-title em { color: var(--cocoa); }
+.section-sage.results-band .eyebrow { color: var(--cocoa); }
+
+.band-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.band-grid .transform-photo-wrap { aspect-ratio: 4 / 5; }
+
 /* ---- Lightbox -------------------------------------------- */
 .lightbox {
   position: fixed;
@@ -1226,6 +1250,8 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
   .pain-layout { grid-template-columns: 1fr; gap: 40px; }
 
+  .band-grid { grid-template-columns: repeat(2, 1fr); }
+
   .hero-grid { grid-template-columns: 1fr; gap: 56px; }
   .hero-visual { max-width: 440px; margin: 0 auto; width: 100%; }
   .hero-visual figcaption { left: 12px; }
@@ -1251,9 +1277,15 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   .hero { padding: 120px 0 80px; }
 
   .included-grid,
-  .proof-grid,
   .testimonials,
   .steps-grid { grid-template-columns: 1fr; }
+
+  .proof-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 32px; }
+  .transform-label { font-size: 15px; padding: 10px 8px; }
+  .results-band { padding: 60px 0; }
+  .band-grid { gap: 12px; }
+  .band-head { margin-bottom: 24px; }
+  .band-head .btn { width: 100%; justify-content: center; }
 
   .footer-inner { flex-direction: column; text-align: center; }
 

@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.pain-list',
     '.included-grid',
     '.proof-grid',
+    '.band-grid',
     '.testimonials',
     '.steps-grid',
     '.focus-list',
@@ -115,11 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   staggerGroups.forEach(selector => {
-    const group = document.querySelector(selector);
-    if (!group) return;
-    const children = group.querySelectorAll('.reveal');
-    children.forEach((child, i) => {
-      child.style.transitionDelay = `${i * 0.08}s`;
+    document.querySelectorAll(selector).forEach(group => {
+      group.querySelectorAll('.reveal').forEach((child, i) => {
+        child.style.transitionDelay = `${i * 0.08}s`;
+      });
     });
   });
 
