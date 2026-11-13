@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- Scroll-reveal animation -------------------------- */
   const revealTargets = document.querySelectorAll(
     '.section-title, .eyebrow, .hero-eyebrow, .hero-headline, ' +
-    '.hero-sub, .hero-tagline, .pain-card, .focus-list li, ' +
+    '.hero-sub, .hero-tagline, .pain-list li, .focus-list li, ' +
     '.included-card, .fit-list li, .fit-note, .transform-card, ' +
     '.testimonial-card, .step-card, .faq-item, .about-quote, ' +
     '.section-body, .cta-label, .cta-body, .focus-subhead, ' +
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Staggered child reveals -------------------------- */
   const staggerGroups = [
-    '.pain-grid',
+    '.pain-list',
     '.included-grid',
     '.proof-grid',
     '.testimonials',
@@ -135,6 +135,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+
+  /* ---- Results lightbox --------------------------------- */
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    const lbImg = lightbox.querySelector('img');
+    const closeLb = () => { lightbox.hidden = true; lbImg.src = ''; document.body.style.overflow = ''; };
+    document.querySelectorAll('.transform-photo-wrap[data-full]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        lbImg.src = btn.dataset.full;
+        lbImg.alt = btn.querySelector('img').alt;
+        lightbox.hidden = false;
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    lightbox.addEventListener('click', closeLb);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !lightbox.hidden) closeLb(); });
+  }
 
 
   /* ---- Smooth CTA button click feedback ----------------- */
