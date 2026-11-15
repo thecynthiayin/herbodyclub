@@ -17,15 +17,16 @@
   --cocoa:        #7A5C45;
   --cocoa-dark:   #5A3F2E;
   --sage:         #9BA98B;
-  --sage-light:   #E8EDDF;
+  --sage-light:   #F8F1DE;   /* light vanilla (was light green) */
   --charcoal:     #2E2822;
   --soft-black:   #1A1612;
   --warm-gray:    #847E78;
   --text-muted:   #9C9690;
 
   /* Typography */
-  --font-serif:   'Cormorant Garamond', Georgia, serif;
-  --font-sans:    'Jost', system-ui, sans-serif;
+  /* Poppins: free geometric font similar to ITC Avant Garde Gothic */
+  --font-serif:   'Poppins', 'Century Gothic', system-ui, sans-serif;
+  --font-sans:    'Poppins', 'Century Gothic', system-ui, sans-serif;
 
   /* Spacing */
   --section-pad:  90px 0;
@@ -44,7 +45,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-sans);
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.75;
   color: var(--charcoal);
   background: var(--cream);
@@ -67,19 +68,23 @@ ul { list-style: none; }
 }
 
 .center { text-align: center; }
+.nowrap { white-space: nowrap; }
 .mt-4   { margin-top: 48px; }
 
 /* ---- Typography ------------------------------------------ */
 h1, h2, h3 {
   font-family: var(--font-serif);
-  font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(44px, 7vw, 76px); }
-h2 { font-size: clamp(32px, 4.5vw, 52px); }
-h3 { font-size: clamp(20px, 2.5vw, 26px); font-weight: 500; }
+/* Highlighted words in headings: brown, not italic */
+h1 em, h2 em { font-style: normal; }
+
+h1 { font-size: clamp(36px, 5.4vw, 60px); }
+h2 { font-size: clamp(26px, 3.4vw, 40px); }
+h3 { font-size: clamp(18px, 2vw, 22px); font-weight: 700; }
 
 em { font-style: italic; }
 
@@ -217,8 +222,8 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 .logo {
   font-family: var(--font-serif);
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
   color: var(--charcoal);
   text-decoration: none;
   letter-spacing: 0.03em;
@@ -317,8 +322,8 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 .mobile-link {
   font-family: var(--font-serif);
-  font-size: 36px;
-  font-weight: 300;
+  font-size: 28px;
+  font-weight: 600;
   color: var(--charcoal);
   text-decoration: none;
   transition: color var(--transition);
@@ -387,7 +392,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   inset: 0;
   background:
     radial-gradient(ellipse 60% 50% at 80% 50%, rgba(201, 185, 159, 0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 10% 90%, rgba(155, 169, 139, 0.12) 0%, transparent 70%);
+    radial-gradient(ellipse 40% 60% at 10% 90%, rgba(232, 214, 170, 0.18) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -457,8 +462,8 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 .hero-trust strong {
   font-family: var(--font-serif);
-  font-size: 26px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 700;
   color: var(--charcoal);
   line-height: 1.3;
 }
@@ -513,12 +518,12 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 .hero-headline {
   color: var(--soft-black);
   margin-bottom: 28px;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 .hero-headline em {
   color: var(--cocoa);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .hero-sub {
@@ -531,16 +536,25 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 .hero-tagline {
   font-family: var(--font-serif);
-  font-size: 23px;
+  font-size: 19px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   color: var(--cocoa-dark);
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   max-width: 540px;
-  padding-left: 18px;
-  border-left: 2px solid var(--cocoa);
 }
+
+.hero-note {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--cocoa-dark);
+  margin: 4px 0 36px;
+  max-width: 560px;
+}
+
+.included-card p + p { margin-top: 10px; }
+.video-credential strong { color: var(--charcoal); font-weight: 600; }
 
 .hero-trust li.trust-highlight strong { color: var(--cocoa); }
 
@@ -588,7 +602,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   text-align: center;
   padding: 24px;
   font-family: var(--font-serif);
-  font-size: 22px;
+  font-size: 18px;
   font-style: italic;
   color: var(--cocoa);
 }
@@ -640,9 +654,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 .pain-intro .cta-label {
   margin: 32px 0 0;
-  padding-left: 20px;
-  border-left: 2px solid var(--taupe);
-  font-size: 23px;
+  font-size: 19px;
   color: var(--warm-gray);
 }
 
@@ -669,8 +681,8 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 .pain-list h3 {
   font-family: var(--font-serif);
-  font-size: 27px;
-  font-weight: 500;
+  font-size: 21px;
+  font-weight: 700;
   color: var(--charcoal);
   margin-bottom: 8px;
 }
@@ -683,7 +695,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 .cta-label {
   font-family: var(--font-serif);
-  font-size: 26px;
+  font-size: 21px;
   font-style: italic;
   color: var(--charcoal);
   margin-bottom: 28px;
@@ -795,10 +807,8 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 .about-quote {
   font-family: var(--font-serif);
-  font-size: 23px;
+  font-size: 19px;
   color: var(--cocoa);
-  border-left: 3px solid var(--taupe-light);
-  padding-left: 24px;
   margin-top: 32px;
   line-height: 1.6;
 }
@@ -907,7 +917,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 .fit-note {
   font-family: var(--font-serif);
-  font-size: 23px;
+  font-size: 19px;
   font-style: italic;
   color: var(--warm-gray);
   text-align: center;
@@ -922,6 +932,11 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   margin-top: 56px;
+}
+
+/* Centre a lone photo on the last row (3-column layout) */
+@media (min-width: 901px) {
+  .proof-grid > .transform-card:last-child:nth-child(3n+1) { grid-column: 2; }
 }
 
 .section-lead {
@@ -997,8 +1012,8 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   margin-top: auto;
   padding: 16px 20px;
   font-family: var(--font-serif);
-  font-size: 21px;
-  font-style: italic;
+  font-size: 16px;
+  font-weight: 600;
   color: var(--charcoal);
   text-align: center;
   background: var(--white);
@@ -1331,6 +1346,9 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
   .proof-grid { grid-template-columns: repeat(2, 1fr); }
 
+  /* Odd number of photos: last one spans the full width as a featured photo */
+  .proof-grid > .transform-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
   .video-layout { grid-template-columns: 1fr; gap: 36px; }
 
   /* Show the whole photo on smaller screens (no cropping) */
@@ -1356,8 +1374,8 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 @media (max-width: 680px) {
   :root { --section-pad: 70px 0; }
 
-  h1 { font-size: 44px; }
-  h2 { font-size: 34px; }
+  h1 { font-size: 34px; }
+  h2 { font-size: 26px; }
 
   .hero { padding: 70px 0; }
   #video { padding-top: 110px; }
@@ -1367,7 +1385,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   .steps-grid { grid-template-columns: 1fr; }
 
   .proof-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 32px; }
-  .transform-label { font-size: 17px; padding: 10px 8px; }
+  .transform-label { font-size: 14px; padding: 10px 8px; }
   .results-band { padding: 60px 0; }
   .band-grid { gap: 12px; }
   .band-head { margin-bottom: 24px; }
@@ -1386,7 +1404,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   .hero-trust { grid-template-columns: 1fr 1fr; gap: 20px 0; }
   .hero-trust li { padding: 0 16px; }
   .hero-trust li:nth-child(odd) { padding-left: 0; border-left: none; }
-  .hero-trust strong { font-size: 21px; }
+  .hero-trust strong { font-size: 18px; }
   .hero-trust span { font-size: 11px; }
 
   .pain-list li { grid-template-columns: 48px 1fr; gap: 14px; }
@@ -1396,7 +1414,15 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 }
 
 @media (max-width: 480px) {
-  .hero-headline { font-size: 40px; }
-  .cta-label { font-size: 22px; }
+  .hero-headline { font-size: 32px; }
+  .cta-label { font-size: 18px; }
 }
 
+
+/* About heading: smaller so "Certified Physique Transformation" fits on one line */
+.about-title { font-size: clamp(22px, 2.4vw, 28px); }
+
+/* Very small phones: let locked phrases wrap so headings never run off-screen */
+@media (max-width: 400px) {
+  .nowrap { white-space: normal; }
+}

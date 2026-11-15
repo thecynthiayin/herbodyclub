@@ -23,8 +23,8 @@ body.apply-page {
 }
 
 .apply-title {
-  font-size: clamp(44px, 6vw, 68px);
-  font-weight: 300;
+  font-size: clamp(34px, 4.6vw, 52px);
+  font-weight: 700;
   color: var(--soft-black);
   margin-bottom: 24px;
 }
@@ -222,8 +222,17 @@ body.apply-page {
   box-shadow: 0 4px 32px rgba(42, 35, 25, 0.06);
 }
 
+/* Header: keep the logo on one line on phones */
+.apply-page .logo { white-space: nowrap; }
+.nav-back { white-space: nowrap; flex-shrink: 0; }
+
 @media (max-width: 680px) {
   .apply-form { padding: 36px 24px; }
+}
+
+@media (max-width: 480px) {
+  .nav-back-long { display: none; }   /* shows just "← Home" */
+  .apply-page .btn-nav { padding: 9px 18px; letter-spacing: 0.1em; }
 }
 
 /* ---- Form Steps ------------------------------------------ */
@@ -232,8 +241,8 @@ body.apply-page {
 
 .step-title {
   font-family: var(--font-serif);
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 26px;
+  font-weight: 700;
   color: var(--charcoal);
   margin-bottom: 36px;
   padding-bottom: 24px;
@@ -268,6 +277,15 @@ body.apply-page {
 
 .req { color: var(--cocoa); }
 .optional { color: var(--text-muted); font-weight: 400; text-transform: none; letter-spacing: 0; }
+
+/* Answer options (radio cards, checkbox) are <label>s too: keep them in normal case */
+.form-group label.radio-card,
+.form-group label.checkbox-label {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.form-group label.radio-card { font-size: inherit; }
 
 .form-group input[type="text"],
 .form-group input[type="email"],

@@ -36,3 +36,9 @@ ChromeDebug/
 # Raw photo source folders (not used by the website)
 images/Body Transformation-*/
 images/Transformation Photos-*/
+
+# Too large for GitHub (540 MB) - compress or host on YouTube/Vimeo first
+images/intro_vd.MOV
+
+# Original photos (web-sized copies are in images/results/)
+images/fix*.jpg

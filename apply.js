@@ -66,6 +66,7 @@ function validateStep(step) {
     valid = validateSelect('countryCode', 'countryCodeError') && valid;
     valid = validateField('whatsapp', 'whatsappError') && valid;
     valid = validateSelect('age', 'ageError') && valid;
+    valid = validateSelect('nationality', 'nationalityError') && valid;
   }
 
   if (step === 2) {
@@ -190,6 +191,7 @@ document.getElementById('applyForm').addEventListener('submit', async (e) => {
     countryCode:        document.getElementById('countryCode').value,
     whatsapp:           document.getElementById('countryCode').value + document.getElementById('whatsapp').value.trim(),
     age:                document.getElementById('age').value,
+    nationality:        document.getElementById('nationality').value,
     instagram:          document.getElementById('instagram').value.trim() || 'Not provided',
     primaryGoal:        document.querySelector('input[name="primaryGoal"]:checked')?.value || '',
     trainingExperience: document.getElementById('trainingExperience').value,
