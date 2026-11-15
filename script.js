@@ -137,21 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ---- Coaching video: show placeholder if file missing - */
-  const videoFrame = document.getElementById('coachingVideo');
-  if (videoFrame) {
-    const video  = videoFrame.querySelector('video');
-    const source = video && video.querySelector('source');
-    const markEmpty = () => videoFrame.classList.add('is-empty');
-    if (!video || !source || !source.getAttribute('src')) markEmpty();
-    else {
-      source.addEventListener('error', markEmpty);
-      video.addEventListener('error', markEmpty);
-      if (video.error || video.networkState === 3) markEmpty(); // NETWORK_NO_SOURCE
-    }
-  }
-
-
   /* ---- Results lightbox --------------------------------- */
   const lightbox = document.getElementById('lightbox');
   if (lightbox) {
