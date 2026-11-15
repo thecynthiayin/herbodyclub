@@ -42,3 +42,17 @@ images/intro_vd.MOV
 
 # Original photos (web-sized copies are in images/results/)
 images/fix*.jpg
+
+# ---- Personal / private (repo is public — keep these on this computer only) ----
+# Google Apps Script: contains your email and Google Sheet ID (runs on Google, not on the website)
+Code.gs
+*.gs
+# Internal notes / setup guide
+README.md
+# Any private folder or file you add later, e.g. private/notes.txt or plan.private.md
+private/
+*.private.*
+# Exported form responses / spreadsheets
+*.csv
+*.xlsx
+*.xls
