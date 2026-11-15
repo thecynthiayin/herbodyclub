@@ -9,7 +9,7 @@ body.apply-page {
 /* ---- Apply Hero ------------------------------------------ */
 .apply-hero {
   padding: 160px 0 70px;
-  background: linear-gradient(160deg, var(--cream-dark) 0%, var(--cream) 60%, var(--sage-light) 100%);
+  background: linear-gradient(160deg, var(--cream-dark) 0%, var(--cream) 60%, var(--cream-dark) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -58,13 +58,13 @@ body.apply-page {
 
 .success-icon {
   width: 72px; height: 72px;
-  background: var(--sage-light);
+  background: var(--cream-dark);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 28px;
-  color: var(--sage);
+  color: var(--cocoa);
   margin: 0 auto 28px;
   font-weight: 700;
 }
@@ -130,8 +130,8 @@ body.apply-page {
 }
 
 .progress-step.done .step-dot {
-  background: var(--sage);
-  border-color: var(--sage);
+  background: var(--cocoa);
+  border-color: var(--cocoa);
 }
 
 .progress-step.done .step-dot::after {
@@ -158,7 +158,7 @@ body.apply-page {
 }
 
 .progress-step.active span { color: var(--cocoa); }
-.progress-step.done span   { color: var(--sage); }
+.progress-step.done span   { color: var(--cocoa); }
 
 .progress-line {
   flex: 1;
@@ -416,7 +416,7 @@ body.apply-page {
 .privacy-note {
   font-size: 13px;
   color: var(--text-muted);
-  background: var(--sage-light);
+  background: var(--cream-dark);
   border-radius: var(--radius-sm);
   padding: 14px 18px;
   margin-bottom: 24px;

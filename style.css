@@ -1,7 +1,7 @@
 /* ============================================================
    HER BODY CLUB — Main Stylesheet
    Aesthetic: Warm, minimal, earthy feminine wellness
-   Colors: Cream, warm taupe, cocoa, sage, soft black
+   Colors: Cream, warm taupe, cocoa, soft black
    ============================================================ */
 
 /* ---- Reset & Base ---------------------------------------- */
@@ -16,8 +16,6 @@
   --taupe-light:  #E0D5C6;
   --cocoa:        #7A5C45;
   --cocoa-dark:   #5A3F2E;
-  --sage:         #9BA98B;
-  --sage-light:   #F8F1DE;   /* light vanilla (was light green) */
   --charcoal:     #2E2822;
   --soft-black:   #1A1612;
   --warm-gray:    #847E78;
@@ -380,7 +378,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
     160deg,
     var(--cream-dark) 0%,
     var(--cream) 50%,
-    var(--sage-light) 100%
+    var(--cream-dark) 100%
   );
   padding: 100px 0;
   overflow: hidden;
@@ -392,7 +390,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   inset: 0;
   background:
     radial-gradient(ellipse 60% 50% at 80% 50%, rgba(201, 185, 159, 0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 10% 90%, rgba(232, 214, 170, 0.18) 0%, transparent 70%);
+    radial-gradient(ellipse 40% 60% at 10% 90%, rgba(201, 185, 159, 0.14) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -511,7 +509,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--cocoa);
   margin-bottom: 20px;
 }
 
@@ -635,7 +633,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 .section-light  { background: var(--white); }
 .section-cream  { background: var(--cream); }
 .section-dark   { background: var(--charcoal); }
-.section-sage   { background: var(--sage-light); }
+.section-sage   { background: var(--cream-dark); }
 
 .section-hero-cta {
   background: linear-gradient(145deg, var(--cocoa-dark) 0%, var(--cocoa) 60%, var(--charcoal) 100%);
@@ -884,7 +882,7 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 /* ---- Is This For You? ------------------------------------ */
 .section-sage .section-title { color: var(--charcoal); }
-.section-sage .eyebrow       { color: var(--sage); }
+.section-sage .eyebrow       { color: var(--cocoa); }
 
 .fit-list {
   display: flex;
@@ -912,8 +910,8 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
   border-color: var(--taupe);
 }
 
-.fit-list .check { border-color: var(--sage); background: var(--white); }
-.fit-list .check::after { border-color: var(--sage); }
+.fit-list .check { border-color: var(--cocoa); background: var(--white); }
+.fit-list .check::after { border-color: var(--cocoa); }
 
 .fit-note {
   font-family: var(--font-serif);
@@ -1288,7 +1286,8 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 
 /* ---- Footer ---------------------------------------------- */
 .footer {
-  background: var(--soft-black);
+  background: var(--cream);
+  border-top: 1px solid var(--taupe-light);
   padding: 40px 0;
 }
 
@@ -1303,14 +1302,14 @@ a.btn-primary[href="apply.html"]:hover::after { transform: translateX(4px); }
 .footer-logo {
   font-family: var(--font-serif);
   font-size: 20px;
-  color: var(--white);
+  color: var(--charcoal);
   font-weight: 400;
   letter-spacing: 0.03em;
 }
 
 .footer-copy {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--warm-gray);
   letter-spacing: 0.05em;
 }
 
