@@ -22,4 +22,4 @@ See the [LICENSE](LICENSE) file for the full terms.
 
 ## Contact
 
-For permission requests or enquiries, please get in touch via https://www.herbodyclub.com/
+For permission requests or enquiries, please get in touch via https://hansuyin.vercel.app/
