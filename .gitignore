@@ -56,3 +56,19 @@ private/
 *.csv
 *.xlsx
 *.xls
+
+# ---- Images & videos ----
+# Everything new in images/ and videos/ is ignored by default so personal or raw
+# photos never get pushed by accident. Files ALREADY in the repo stay tracked
+# (the live website needs them). To publish a new website image on purpose:
+#   git add -f images/your-new-image.jpg
+images/**
+videos/**
+# Raw / original media formats anywhere in the project
+*.heic
+*.HEIC
+*.raw
+*.dng
+*.psd
+*.mov
+*.MOV
