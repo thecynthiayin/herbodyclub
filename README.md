@@ -8,7 +8,7 @@ Source for the Her Body Club website: the landing page and coaching application 
 
 ## ⚠️ Not open source: reuse is not allowed
 
-This repository is public **only** so the website can be hosted on GitHub Pages. It is **not** open source.
+It is **not** open source.
 
 **All rights reserved.** You may not copy, modify, redistribute, or reuse any part of this repository, including:
 
