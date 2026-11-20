@@ -47,8 +47,7 @@ images/fix*.jpg
 # Google Apps Script: contains your email and Google Sheet ID (runs on Google, not on the website)
 Code.gs
 *.gs
-# Internal notes / setup guide
-README.md
+# Internal notes / setup guide (public README.md is tracked; private guide is README.private.md)
 # Any private folder or file you add later, e.g. private/notes.txt or plan.private.md
 private/
 *.private.*
